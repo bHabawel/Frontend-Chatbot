@@ -46,7 +46,7 @@ class Chatbox {
 
   fetchAPIResponse(userMessage) {
     // Make a request to the API with the user's message
-    fetch("http://127.0.0.1:5000/predict", {
+    fetch("https://backend-chatbot-syfr.onrender.com/predict", {
       method: "POST",
       body: JSON.stringify({ message: userMessage }),
       mode: "cors",
