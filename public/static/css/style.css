@@ -1,0 +1,73 @@
+/* Style for the message container */
+.chatbox__messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for each message */
+.messages__item {
+  background-color: #e1f5fe;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Specific style for user messages */
+.messages__item--operator {
+  background-color: #4caf50;
+  color: white;
+  align-self: flex-end;
+  border-radius: 8px;
+  margin-left: 0;
+}
+
+.messages__item--visitor {
+  background-color: #fbfbfb; /* A green color for user messages */
+  color: #212121;
+  align-self: flex-start;
+  border-radius: 8px;
+  margin-left: 0;
+  text-align: left;
+  max-width: 80%; /* Adjust width so messages don't stretch the whole container */
+  margin-bottom: 8px; /* Space between messages */
+  padding: 10px; /* Space around message text */
+}
+
+/* Custom Scrollbar Styles */
+
+/* For the entire scrollbar */
+.chatbox__messages::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track (the part the thumb slides within) */
+.chatbox__messages::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px;
+}
+
+/* Style the scrollbar thumb (the draggable part of the scrollbar) */
+.chatbox__messages::-webkit-scrollbar-thumb {
+  background: #888; /* Dark gray color */
+  border-radius: 10px;
+}
+
+/* When the thumb is hovered, make it a little darker */
+.chatbox__messages::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Even darker gray */
+}
+
+/* Optional: Style the scrollbar when it's active (dragging) */
+.chatbox__messages::-webkit-scrollbar:active {
+  background: #333; /* Darker gray when active */
+}
